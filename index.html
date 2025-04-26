@@ -1,54 +1,232 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CandyCulture_MW</title>
   <style>
-	   body {
-    font-family: Arial;
-    text-align: center;
-    background-image: url('candy.jpg.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 50px;
-    color: white;
-  }
-  h1 {
-    color: white;
-    font-size: 3em;
-  }
-  p {
-    font-size: 1.2em;
-    color: white;
-  }
-    
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: url('candy.jpg.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 50px;
+      color: white;
+    }
+    h1 {
+      color: white;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.5em;
+      color: white;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .whatsapp-button {
+      background-color: #25D366;
+      color: white;
+    }
+    .instagram-button {
+      background-color: #E1306C;
+      color: white;
+    }
+    .order-button {
+      background-color: #d63384;
+      color: white;
+    }
+    input {
+      padding: 10px;
+      width: 300px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    form {
+      margin-top: 30px;
+    }
+    .product {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      margin-bottom: 30px;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .product h3 {
+      color: #d63384;
+      margin-top: 10px;
+    }
+    .product p {
+      color: black;
+      font-size: 1em;
+    }
+    .product-price {
+      font-weight: bold;
+      color: #000;
+      margin-top: 5px;
+    }
+    .shop-button {
+      background-color: #ff69b4;
+      color: white;
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to CandyCulture_MW!</h1>
 
-
-  <p>We sell sweet,  squishy gummy candies perfect for every moment.</p>
+  <h1>Welcome to CandyCulture_MW! 🍬</h1>
+  <p>We sell sweet, squishy candies perfect for every moment.</p>
   <p>Follow us on Instagram @candyculture_mw</p>
-	<a href="https://wa.me/265899908832" target="_blank">
-  <button style="background-color: #25D366; color: white; padding: 15px 30px; font-size: 20px; border: none; border-radius: 10px; margin-top: 20px;">
-    Order on WhatsApp
-  </button>
-</a>
-	<a href="https://www.instagram.com/candyculture_mw/" target="_blank">
-  <button style="background-color: #E1306C; color: white; padding: 15px 30px; font-size: 20px; border: none; border-radius: 10px; margin-top: 20px;">
-    Visit us on Instagram
-  </button>
-</a>
-	<form action="https://formsubmit.co/candyculturemw@gmail.com" method="POST" style="margin-top: 30px;">
-  <input type="text" name="name" placeholder="Your Name" required style="padding:10px; width:300px; margin-bottom:10px;"><br>
-  <input type="text" name="order" placeholder="Your Order" required style="padding:10px; width:300px; margin-bottom:10px;"><br>
-  <button type="submit" style="background-color: #d63384; color: white; padding: 15px 30px; font-size: 20px; border: none; border-radius: 10px;">
-    Place Order
-  </button>
-</form>
-	
+
+  <!-- WhatsApp and Instagram Buttons -->
+  <a href="https://wa.me/265899908832" target="_blank">
+    <button class="whatsapp-button">Order on WhatsApp</button>
+  </a>
+  <br><br>
+  <a href="https://www.instagram.com/candyculture_mw/" target="_blank">
+    <button class="instagram-button">Visit us on Instagram</button>
+  </a>
+  <br><br>
+
+  <!-- Shop Now Button -->
+  <a href="#shop">
+    <button class="shop-button">Shop Now</button>
+  </a>
+
+  <!-- PRODUCTS SECTION -->
+  <h2 id="shop" style="margin-top: 70px;">Our Sweet Collection</h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="sugarnuts.jpeg" alt="Sugar Nuts">
+      <h3>Sugar Nuts 🤩</h3>
+      <p>The perfect blend of crunch and sweetness 🔥💫</p>
+      <p class="product-price">3000MWK per jar</p>
+      <a href="https://wa.me/265899908832?text=I want to order Sugar Nuts!">
+        <button class="whatsapp-button">Order Now</button>
+      </a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="shockers.jpeg" alt="Shockers">
+      <h3>Shockers 🤯</h3>
+      <p>Get ready for a shockingly sour experience! 💥🚨😉</p>
+      <p class="product-price">2000MWK</p>
+      <a href="https://wa.me/265899908832?text=I want to order Shockers!">
+        <button class="whatsapp-button">Order Now</button>
+      </a>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="monstabubblejoe.jpeg" alt="Monsta Bubble Joe">
+      <h3>Monsta Bubble Joe 😋</h3>
+      <p>Chew like a Monsta, blow like a pro! Flavors: Grape🍇 Strawberry🍓 Watermelon🍉</p>
+      <p class="product-price">150MWK (bulk only)</p>
+      <a href="https://wa.me/265899908832?text=I want to order Monsta Bubble Joe!">
+        <button class="whatsapp-button">Order Now</button>
+      </a>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="bonjoypops.jpeg" alt="Bonjoy Pops">
+      <h3>Bonjoy Pops 👅</h3>
+      <p>Lick, savor, repeat: the Bonjoy Pops way! Watermelon🍉</p>
+      <p class="product-price">350MWK (bulk only)</p>
+      <a href="https://wa.me/265899908832?text=I want to order Bonjoy Pops!">
+        <button class="whatsapp-button">Order Now</button>
+      </a>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product">
+      <img src="gummyrings.jpeg" alt="Gummy Rings">
+      <h3>Gummy Rings 😍</h3>
+      <p>Sweet, squishy, and totally ring-tastic! 😇</p>
+      <p class="product-price">1500MWK (per pack)</p>
+      <a href="https://wa.me/265899908832?text=I want to order Gummy Rings!">
+        <button class="whatsapp-button">Order Now</button>
+      </a>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product">
+      <img src="butiktoffees.jpeg" alt="Butik Toffees">
+      <h3>Butik Toffees 🫠</h3>
+      <p>Taste the difference with butik toffee where quality meets deliciousness! 💫</p>
+      <p class="product-price">200MWK (bulk only)</p>
+      <a href="https://wa.me/265899908832?text=I want to order Butik Toffees!">
+        <button class="whatsapp-button">Order Now</button>
+      </a>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product">
+      <img src="chappies.jpeg" alt="Chappies">
+      <h3>Chappies 😋</h3>
+      <p>Get your Chappies and other favorite candies from us today! 😙💨🫧</p>
+      <p class="product-price">200MWK (bulk only)</p>
+      <a href="https://wa.me/265899908832?text=I want to order Chappies!">
+        <button class="whatsapp-button">Order Now</button>
+      </a>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product">
+      <img src="stumbogum.jpeg" alt="Stumbo Gum">
+      <h3>Stumbo Gum 😋</h3>
+      <p>Stumbo bubble gum comes with fun facts that’ll blow your mind! 😙💨🫧</p>
+      <p class="product-price">250MWK (bulk only)</p>
+      <a href="https://wa.me/265899908832?text=I want to order Stumbo Gum!">
+        <button class="whatsapp-button">Order Now</button>
+      </a>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="product">
+      <img src="stumbolollipops.jpeg" alt="Stumbo Lollipops">
+      <h3>Stumbo Lollipops 👅</h3>
+      <p>Rainbow of flavors: Apple🍏 Grape🍇 Pineapple🍍 Cherry🍒</p>
+      <p class="product-price">400MWK (bulk only)</p>
+      <a href="https://wa.me/265899908832?text=I want to order Stumbo Lollipops!">
+        <button class="whatsapp-button">Order Now</button>
+      </a>
+    </div>
+
+    <!-- Product 10 -->
+    <div class="product">
+      <img src="torenchocolate.jpeg" alt="Toren Chocolate">
+      <h3>Toren Chocolate 🍫❤️🫠</h3>
+      <p>So rich, so smooth, so irresistible… can you stop at just one bite?</p>
+      <p class="product-price">2500MWK</p>
+      <a href="https://wa.me/265899908832?text=I want to order Toren Chocolate!">
+        <button class="whatsapp-button">Order Now</button>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Order Form Section (if you still want it later) -->
 
 </body>
 </html>
 	
+
