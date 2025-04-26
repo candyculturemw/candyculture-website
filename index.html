@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Candy Culture MW</title>
+  <title>CandyCulture MW</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -18,6 +17,15 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    /* MOBILE BACKGROUND FIX */
+    @media (max-width: 768px) {
+      body {
+        background-size: cover;
+        background-position: center;
+      }
     }
 
     header {
@@ -25,207 +33,187 @@
       padding: 30px 20px;
     }
 
-    h1 {
-      font-size: 2.5em;
+    header h1 {
       margin: 0;
+      font-size: 2.5em;
+      animation: slideIn 1.5s ease-in;
     }
 
-    p.tagline {
-      font-size: 1.2em;
-      margin-top: 10px;
+    .welcome {
+      margin: 20px;
+      font-size: 1.5em;
+      animation: fadeIn 2s ease-in-out;
     }
 
-    #welcome {
-      padding: 30px 20px;
-      background-color: rgba(0, 0, 0, 0.5);
-      margin: 20px auto;
-      border-radius: 15px;
-      max-width: 800px;
-    }
-
-    #welcome h2 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    #products {
+    .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      padding: 30px 20px;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      animation: fadeIn 1.5s ease-in;
+      padding: 20px;
+      animation: fadeInUp 2s ease-in-out;
     }
 
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(30px);}
-      to {opacity: 1; transform: translateY(0);}
+    @media (max-width: 768px) {
+      .products {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .product {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 15px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      animation: slideUp 1s ease forwards;
-      opacity: 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #000;
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s;
     }
 
-    .product:nth-child(1) { animation-delay: 0.2s; }
-    .product:nth-child(2) { animation-delay: 0.4s; }
-    .product:nth-child(3) { animation-delay: 0.6s; }
-    .product:nth-child(4) { animation-delay: 0.8s; }
-    .product:nth-child(5) { animation-delay: 1s; }
-    .product:nth-child(6) { animation-delay: 1.2s; }
-    .product:nth-child(7) { animation-delay: 1.4s; }
-    .product:nth-child(8) { animation-delay: 1.6s; }
-    .product:nth-child(9) { animation-delay: 1.8s; }
-    .product:nth-child(10) { animation-delay: 2s; }
-
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+    .product img {
+      max-width: 100%;
+      border-radius: 10px;
     }
 
     .product:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
-    }
-
-    .product img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .product h2 {
-      margin: 15px 0 10px;
-      font-size: 1.3em;
-    }
-
-    .product p {
-      font-size: 1em;
-      line-height: 1.4em;
     }
 
     .buttons {
       margin: 30px 0;
+      animation: fadeIn 2s ease-in-out;
     }
 
-    .buttons a {
-      display: inline-block;
-      margin: 10px;
+    .btn {
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
       padding: 15px 25px;
-      background-color: #ff66b2;
-      color: white;
-      border-radius: 30px;
+      margin: 10px;
+      border-radius: 5px;
       text-decoration: none;
-      font-size: 1em;
+      font-size: 18px;
       transition: background-color 0.3s;
     }
 
-    .buttons a:hover {
-      background-color: #ff3385;
+    .btn:hover {
+      background-color: #e60073;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+    @keyframes slideIn {
+      0% {transform: translateY(-50px); opacity: 0;}
+      100% {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      0% {transform: translateY(20px); opacity: 0;}
+      100% {transform: translateY(0); opacity: 1;}
     }
 
     footer {
       margin-top: auto;
-      background-color: rgba(0, 0, 0, 0.8);
       padding: 20px;
-      font-size: 0.9em;
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
     }
   </style>
 </head>
-
 <body>
 
 <header>
-  <h1>Candy Culture MW</h1>
-  <p class="tagline">Delicious sweets made with love! 🍬✨</p>
+  <h1>CandyCulture MW</h1>
 </header>
 
-<section id="welcome">
-  <h2>Welcome to Candy Culture MW! 🍭</h2>
-  <p>Discover a world of sweetness! Our handpicked candies are sure to make you smile. Place your orders easily and enjoy pure happiness! 🍬💖</p>
-</section>
+<div class="welcome">
+  Welcome to CandyCulture MW — where every bite is pure happiness! 🍬🍭
+</div>
 
-<section id="products">
-
+<div class="products">
   <div class="product">
-    <h2>Sugar Nuts 🤩</h2>
-    <img src="sugarnuts.jpeg" alt="Sugar Nuts">
+    <img src="sugernuts.jpeg" alt="Sugar Nuts">
+    <h3>Sugar Nuts 🤩</h3>
     <p>The perfect blend of crunch and sweetness 🔥💫<br>3000 MWK per jar</p>
   </div>
 
   <div class="product">
-    <h2>Shockers 🤯</h2>
     <img src="shockers.jpeg" alt="Shockers">
+    <h3>Shockers 🤯</h3>
     <p>Get ready for a shockingly sour experience! 💥🚨😉<br>2000 MWK</p>
   </div>
 
   <div class="product">
-    <h2>Monsta Bubble Joe 😋</h2>
     <img src="monstabubblejoe.jpeg" alt="Monsta Bubble Joe">
-    <p>Chew like a Monsta, blow like a pro! 😙💨<br>Flavors: Grape 🍇, Strawberry 🍓, Watermelon 🍉<br>150 MWK (bulk only)</p>
+    <h3>Monsta Bubble Joe 😋</h3>
+    <p>Chew like a Monsta, blow like a pro! 😙💨<br>150 MWK (bulk only)</p>
   </div>
 
   <div class="product">
-    <h2>Bonjoy Pops 👅</h2>
     <img src="bonjoypops.jpeg" alt="Bonjoy Pops">
-    <p>Lick, savor, repeat: the Bonjoy Pops way! 🍭<br>Watermelon 🍉<br>350 MWK (bulk only)</p>
+    <h3>Bonjoy Pops 👅</h3>
+    <p>Lick, savor, repeat: the Bonjoy Pops way! 🍭<br>350 MWK (bulk only)</p>
   </div>
 
   <div class="product">
-    <h2>Gummy Rings 😍</h2>
     <img src="gummyrings.jpeg" alt="Gummy Rings">
-    <p>Sweet, squishy, and totally ring-tastic! 😇<br>1500 MWK (per pack)</p>
+    <h3>Gummy Rings 😍</h3>
+    <p>Sweet, squishy, and totally ring-tastic! 😇<br>1500 MWK per pack</p>
   </div>
 
   <div class="product">
-    <h2>Butik Toffees 🫠</h2>
     <img src="butiktoffees.jpeg" alt="Butik Toffees">
-    <p>Taste the difference with Butik Toffee, where quality meets deliciousness! 💫<br>200 MWK (bulk only)</p>
+    <h3>Butik Toffees 🫠</h3>
+    <p>Taste the difference with butik toffee 💫<br>200 MWK (bulk only)</p>
   </div>
 
   <div class="product">
-    <h2>Chappies 😋</h2>
     <img src="chappies.jpeg" alt="Chappies">
-    <p>Did you know that @CandyCulture_MW is the best candy plug in Malawi? 😙💨🫧<br>200 MWK (bulk only)</p>
+    <h3>Chappies 😋</h3>
+    <p>Get your Chappies and more from CandyCulture MW! 😙💨🫧<br>200 MWK (bulk only)</p>
   </div>
 
   <div class="product">
-    <h2>Stumbo Gum 😋</h2>
     <img src="stumbogum.jpeg" alt="Stumbo Gum">
-    <p>Chew on this: Stumbo bubble gum comes with fun facts that’ll blow your mind! 😙💨🫧<br>250 MWK (bulk only)</p>
+    <h3>Stumbo Gum 😋</h3>
+    <p>Fun facts + big bubbles = Stumbo magic! 😙💨🫧<br>250 MWK (bulk only)</p>
   </div>
 
   <div class="product">
-    <h2>Stumbo Lollipops 👅</h2>
     <img src="stumbolollipops.jpeg" alt="Stumbo Lollipops">
-    <p>Stumbo lollipops come in a rainbow of flavors! 🍭<br>Apple 🍏, Grape 🍇, Pineapple 🍍, Cherry 🍒<br>400 MWK (bulk only)</p>
+    <h3>Stumbo Lollipops 👅</h3>
+    <p>Which flavor will you try first? 🍏🍇🍍🍒<br>400 MWK (bulk only)</p>
   </div>
 
   <div class="product">
-    <h2>Toren Chocolate 🍫❤️🫠</h2>
     <img src="torenchocolate.jpeg" alt="Toren Chocolate">
-    <p>So rich, so smooth, so irresistible... Can you stop at just one bite?! 🍫❤️🫠<br>2500 MWK</p>
+    <h3>Toren Chocolate 🍫❤️🫠</h3>
+    <p>So rich, so smooth, so irresistible... 💖<br>2500 MWK</p>
   </div>
-
-</section>
+</div>
 
 <div class="buttons">
-  <a href="https://wa.me/265899908832" target="_blank">Order via WhatsApp</a>
-  <a href="mailto:candyculturemw@gmail.com" target="_blank">Order via Email</a>
-  <a href="thankyou.html" target="_blank">See Thank You Page</a>
+  <a class="btn" href="https://wa.me/265899908832" target="_blank">Order on WhatsApp</a>
+  <a class="btn" href="https://www.instagram.com/candyculture_mw/" target="_blank">Follow on Instagram</a>
+  <a class="btn" href="mailto:candyculturemw@gmail.com">Email Us</a>
 </div>
 
 <footer>
-  <p>&copy; 2025 Candy Culture MW. All rights reserved.</p>
+  &copy; 2025 CandyCulture MW. All rights reserved.
 </footer>
 
 </body>
 </html>
+	
+
+
+
+    
+    
+
+   
+   
+
+
 	
