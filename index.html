@@ -1,78 +1,141 @@
-> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Candy Culture MW</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: url('candy.jpg.jpeg') no-repeat center center fixed;
       background-size: cover;
+      background-attachment: fixed;
       color: #fff;
       text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
+
     header {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px 20px;
     }
+
     h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       margin: 0;
     }
+
     p.tagline {
       font-size: 1.2em;
       margin-top: 10px;
     }
+
+    #welcome {
+      padding: 30px 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 20px auto;
+      border-radius: 15px;
+      max-width: 800px;
+    }
+
+    #welcome h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
     #products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 30px 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeIn 1.5s ease-in;
     }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
     .product {
-      background: rgba(0, 0, 0, 0.6);
-      margin: 10px;
+      background: rgba(255, 255, 255, 0.1);
       padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: slideUp 1s ease forwards;
+      opacity: 0;
     }
+
+    .product:nth-child(1) { animation-delay: 0.2s; }
+    .product:nth-child(2) { animation-delay: 0.4s; }
+    .product:nth-child(3) { animation-delay: 0.6s; }
+    .product:nth-child(4) { animation-delay: 0.8s; }
+    .product:nth-child(5) { animation-delay: 1s; }
+    .product:nth-child(6) { animation-delay: 1.2s; }
+    .product:nth-child(7) { animation-delay: 1.4s; }
+    .product:nth-child(8) { animation-delay: 1.6s; }
+    .product:nth-child(9) { animation-delay: 1.8s; }
+    .product:nth-child(10) { animation-delay: 2s; }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    }
+
     .product img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 10px;
     }
+
     .product h2 {
-      font-size: 1.5em;
-      margin: 15px 0 10px 0;
+      margin: 15px 0 10px;
+      font-size: 1.3em;
     }
+
     .product p {
       font-size: 1em;
+      line-height: 1.4em;
     }
+
     .buttons {
-      margin-top: 20px;
+      margin: 30px 0;
     }
+
     .buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 12px 20px;
+      padding: 15px 25px;
       background-color: #ff66b2;
       color: white;
       border-radius: 30px;
       text-decoration: none;
       font-size: 1em;
+      transition: background-color 0.3s;
     }
+
     .buttons a:hover {
       background-color: #ff3385;
     }
+
     footer {
-      background-color: rgba(0, 0, 0, 0.7);
+      margin-top: auto;
+      background-color: rgba(0, 0, 0, 0.8);
       padding: 20px;
-      margin-top: 20px;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -83,6 +146,11 @@
   <h1>Candy Culture MW</h1>
   <p class="tagline">Delicious sweets made with love! 🍬✨</p>
 </header>
+
+<section id="welcome">
+  <h2>Welcome to Candy Culture MW! 🍭</h2>
+  <p>Discover a world of sweetness! Our handpicked candies are sure to make you smile. Place your orders easily and enjoy pure happiness! 🍬💖</p>
+</section>
 
 <section id="products">
 
@@ -137,7 +205,7 @@
   <div class="product">
     <h2>Stumbo Lollipops 👅</h2>
     <img src="stumbolollipops.jpeg" alt="Stumbo Lollipops">
-    <p>Stumbo lollipops come in a rainbow of flavors! 🍭<br>Flavors: Apple 🍏, Grape 🍇, Pineapple 🍍, Cherry 🍒<br>400 MWK (bulk only)</p>
+    <p>Stumbo lollipops come in a rainbow of flavors! 🍭<br>Apple 🍏, Grape 🍇, Pineapple 🍍, Cherry 🍒<br>400 MWK (bulk only)</p>
   </div>
 
   <div class="product">
@@ -151,6 +219,7 @@
 <div class="buttons">
   <a href="https://wa.me/265899908832" target="_blank">Order via WhatsApp</a>
   <a href="mailto:candyculturemw@gmail.com" target="_blank">Order via Email</a>
+  <a href="thankyou.html" target="_blank">See Thank You Page</a>
 </div>
 
 <footer>
@@ -160,4 +229,3 @@
 </body>
 </html>
 	
-
